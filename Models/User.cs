@@ -18,7 +18,10 @@ namespace Models
         // List Comments made by user
         public List<Comment>? Comments { get; set; }
 
-        
+
+        // Foreign Key to AppUser
+        public string AppUserId { get; set; }
+        public AppUser AppUser { get; set; }
 
         public User() { }
     }
