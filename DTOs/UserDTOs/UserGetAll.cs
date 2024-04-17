@@ -18,6 +18,7 @@ namespace DTOs.UserDTOs
         public int Id { get; set; }
         public string Name { get; set; }
 
+        public string AppUserId { get; set; }
 
         // List articles made by the user
         public List<ArticleListSimpleDTO>? Articles { get; set; }

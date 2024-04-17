@@ -15,6 +15,6 @@ namespace DTOs.ArticleDTOs
         public string Title { get; set; }
         public string Content { get; set; }
         public int? ThemeID { get; set; }
-        public DateTime EditDate { get; set; } 
+        
     }
 }

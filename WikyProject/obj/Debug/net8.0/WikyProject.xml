@@ -4,5 +4,46 @@
         <name>WikyProject</name>
     </assembly>
     <members>
+        <member name="M:WikyProject.Controllers.ArticleControllers.GetAllArticles">
+            <summary>
+            Get all article without comments
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WikyProject.Controllers.ArticleControllers.ReadAllArticleWithComment">
+            <summary>
+            Read all articles with comments
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WikyProject.Controllers.ArticleControllers.UpdateArticle(DTOs.ArticleDTOs.ArticleUpdateDTO,System.Int32)">
+            <summary>
+            Update the Article with DTO and Id of article in input
+            </summary>
+            <param name="article"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WikyProject.Controllers.ArticleControllers.CreateArticleAsync(DTOs.ArticleDTOs.ArticleCreateDTO)">
+            <summary>
+            Create an article base on the DTO
+            </summary>
+            <param name="article"></param>
+            <returns>Hope everythings allright</returns>
+        </member>
+        <member name="M:WikyProject.Controllers.ArticleControllers.RemoveArticle(System.Int32)">
+            <summary>
+            Remove the specified article
+            </summary>
+            <param name="articleId">The article ID to delet</param>
+            <returns>Might return exceptions if not found or no authorisation</returns>
+        </member>
+        <member name="M:WikyProject.Controllers.AuthControllers.Register(DTOs.UserDTOs.UserRegisterDTOs)">
+            <summary>
+            USED TO REGISTER
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

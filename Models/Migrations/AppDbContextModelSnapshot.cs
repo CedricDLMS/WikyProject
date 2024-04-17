@@ -277,6 +277,9 @@ namespace Models.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("UserID")
                         .HasColumnType("int");
 
@@ -304,6 +307,18 @@ namespace Models.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Themes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "DARK"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "LIGHT"
+                        });
                 });
 
             modelBuilder.Entity("Models.User", b =>

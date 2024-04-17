@@ -4,6 +4,8 @@ using Models.DBcontext;
 using Microsoft.AspNetCore.Identity;
 using Models;
 using Swashbuckle.AspNetCore.Filters;
+using Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,11 @@ builder.Services.AddIdentityApiEndpoints<AppUser>()
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>();
 
+// -----------------SERVICE ADDING -----
+
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<ThemeService>();
+builder.Services.AddScoped<ArticleService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

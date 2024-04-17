@@ -11,6 +11,7 @@ namespace Models
     public class Comment
     {
         public int Id { get; set; }
+        public DateTime Created { get; set; }
 
         // Comment Content is maximum 100 length
         [MaxLength(100)]

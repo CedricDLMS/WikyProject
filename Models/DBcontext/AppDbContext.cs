@@ -19,6 +19,11 @@ namespace Models.DBcontext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            var c0 = new Theme { Name = "DARK", Id = 1 };
+            var c1 = new Theme { Name = "LIGHT", Id = 2 };
+            
+
+            modelBuilder.Entity<Theme>().HasData(new List<Theme> { c0, c1});
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

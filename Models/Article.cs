@@ -49,11 +49,7 @@ namespace Models
 
         // PRIORITY
 
-        public required Priority Priority
-        {
-            get { return Priority; }
-            set { Priority = value; }
-        }
+        public required Priority Priority { get; set; } 
         
         // Foreign Key For Author 
         [ForeignKey("UserID")]

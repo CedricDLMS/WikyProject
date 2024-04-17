@@ -11,7 +11,7 @@ namespace Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-
+        
         // List articles made by the user
         public List<Article>? Articles { get; set; }
 
