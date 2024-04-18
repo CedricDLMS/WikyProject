@@ -12,9 +12,11 @@ namespace DTOs.CommentDTOs
     public class CommentGetDTO
     {
         public int ID { get; set; }
-        public string AuthorID { get; set; }
+        public int ArticleID { get; set; }
+        public int AuthorID { get; set; }
         public string AuthorName { get; set; }
         public string Comment { get; set; }
         public DateTime DateTime { get; set; }
+        public DateTime LastUpdate { get; set; }
     }
 }

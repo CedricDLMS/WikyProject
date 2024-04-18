@@ -8,6 +8,9 @@ using Repositories;
 
 namespace WikyProject.Controllers
 {
+    /// <summary>
+    /// Controller to override original register
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class AuthControllers : ControllerBase

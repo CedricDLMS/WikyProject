@@ -13,6 +13,9 @@ using DTOs.Theme;
 
 namespace Repositories
 {
+    /// <summary>
+    /// Tools for Article
+    /// </summary>
     public class ArticleService
     {
         readonly AppDbContext context;
@@ -83,6 +86,7 @@ namespace Repositories
         {
             var article = await context.Articles
                 .Include(a => a.Comments)
+                .ThenInclude(c=> c.User)
                 .Include(a => a.User)    // Only if there's an Author object and you need data from it
                 .Include(a => a.Theme)     // Include this if Theme is a navigation property
                 .FirstOrDefaultAsync(a => a.Id == articleId);
@@ -102,7 +106,11 @@ namespace Repositories
                 Priority = article.Priority,
                 Comments = article.Comments?.Select(comment => new CommentListContentDTO
                 {
-                    content = comment.Content
+                    ID = comment.Id,
+                    authorName = comment.User.Name,
+                    content = comment.Content,
+                    Created = comment.Created,
+                    LastUpdated = comment.Updated,
                 }).ToList()
             };
 

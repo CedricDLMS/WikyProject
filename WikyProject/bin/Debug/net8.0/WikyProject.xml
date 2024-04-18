@@ -4,6 +4,11 @@
         <name>WikyProject</name>
     </assembly>
     <members>
+        <member name="T:WikyProject.Controllers.ArticleControllers">
+            <summary>
+            Controllers for articles editing/Creating/Reading/Updating
+            </summary>
+        </member>
         <member name="M:WikyProject.Controllers.ArticleControllers.GetAllArticles">
             <summary>
             Get all article without comments
@@ -12,8 +17,15 @@
         </member>
         <member name="M:WikyProject.Controllers.ArticleControllers.ReadAllArticleWithComment">
             <summary>
-            Read all articles with comments
+            ERREUR ID COMMENTAIRE !!!!!! Read all articles with comments 
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WikyProject.Controllers.ArticleControllers.ReadArticle(System.Int32)">
+            <summary>
+            Reading an article with the comments section
+            </summary>
+            <param name="id">id of the article</param>
             <returns></returns>
         </member>
         <member name="M:WikyProject.Controllers.ArticleControllers.UpdateArticle(DTOs.ArticleDTOs.ArticleUpdateDTO,System.Int32)">
@@ -38,12 +50,35 @@
             <param name="articleId">The article ID to delet</param>
             <returns>Might return exceptions if not found or no authorisation</returns>
         </member>
+        <member name="T:WikyProject.Controllers.AuthControllers">
+            <summary>
+            Controller to override original register
+            </summary>
+        </member>
         <member name="M:WikyProject.Controllers.AuthControllers.Register(DTOs.UserDTOs.UserRegisterDTOs)">
             <summary>
             USED TO REGISTER
             </summary>
             <param name="user"></param>
             <returns></returns>
+        </member>
+        <member name="T:WikyProject.Controllers.CommentControllers">
+            <summary>
+            Controllers for comment editing/creation/deleting/updating
+            </summary>
+        </member>
+        <member name="M:WikyProject.Controllers.CommentControllers.CreateComment(System.String,System.Int32)">
+            <summary>
+            Creation of a commentary, needs Refactos !
+            </summary>
+            <param name="content"></param>
+            <param name="articleId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WikyProject.Controllers.ThemeControllers">
+            <summary>
+            Controllers for theme editing/updating/creating/deleting
+            </summary>
         </member>
     </members>
 </doc>

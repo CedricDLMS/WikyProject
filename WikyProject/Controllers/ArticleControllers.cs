@@ -10,6 +10,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WikyProject.Controllers
 {
+    /// <summary>
+    /// Controllers for articles editing/Creating/Reading/Updating
+    /// </summary>
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class ArticleControllers : ControllerBase
@@ -41,7 +44,7 @@ namespace WikyProject.Controllers
         }
 
         /// <summary>
-        /// Read all articles with comments
+        /// ERREUR ID COMMENTAIRE !!!!!! Read all articles with comments 
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -50,7 +53,11 @@ namespace WikyProject.Controllers
             var list = await articleService.ListArticlesWithCommentsAsync();
             return Ok(list);
         }
-
+        /// <summary>
+        /// Reading an article with the comments section
+        /// </summary>
+        /// <param name="id">id of the article</param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> ReadArticle(int id)
         {

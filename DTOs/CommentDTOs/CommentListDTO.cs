@@ -14,5 +14,6 @@ namespace DTOs.CommentDTOs
         public int ID { get; set; }
         public int AuthorID { get; set; }
         public DateTime Created {  get; set; }
+        public DateTime LastUpdated { get; set; }
     }
 }

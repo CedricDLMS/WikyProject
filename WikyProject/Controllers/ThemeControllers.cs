@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace WikyProject.Controllers
 {
+    /// <summary>
+    /// Controllers for theme editing/updating/creating/deleting
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class ThemeControllers : ControllerBase

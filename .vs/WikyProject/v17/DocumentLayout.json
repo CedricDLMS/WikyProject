@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\wikyproject\\controllers\\articlecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|solutionrelative:wikyproject\\controllers\\articlecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\wikyproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|solutionrelative:wikyproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\wikyproject\\controllers\\authcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|solutionrelative:wikyproject\\controllers\\authcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20282FE6-8C2C-4B95-95C3-44CF0B832F89}|Models\\Models.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20282FE6-8C2C-4B95-95C3-44CF0B832F89}|Models\\Models.csproj|solutionrelative:models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75E7CE5F-A2A1-43F7-BE6E-1D16749DCC72}|Repositories\\Repositories.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\repositories\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75E7CE5F-A2A1-43F7-BE6E-1D16749DCC72}|Repositories\\Repositories.csproj|solutionrelative:repositories\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E548B347-B2E2-4727-9423-8EB3CE6AB9A5}|DTOs\\DTOs.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\dtos\\articledtos\\articleupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E548B347-B2E2-4727-9423-8EB3CE6AB9A5}|DTOs\\DTOs.csproj|solutionrelative:dtos\\articledtos\\articleupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E548B347-B2E2-4727-9423-8EB3CE6AB9A5}|DTOs\\DTOs.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\dtos\\articledtos\\articlereaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E548B347-B2E2-4727-9423-8EB3CE6AB9A5}|DTOs\\DTOs.csproj|solutionrelative:dtos\\articledtos\\articlereaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75E7CE5F-A2A1-43F7-BE6E-1D16749DCC72}|Repositories\\Repositories.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\repositories\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75E7CE5F-A2A1-43F7-BE6E-1D16749DCC72}|Repositories\\Repositories.csproj|solutionrelative:repositories\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\wikyproject\\controllers\\commentcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|solutionrelative:wikyproject\\controllers\\commentcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E548B347-B2E2-4727-9423-8EB3CE6AB9A5}|DTOs\\DTOs.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\dtos\\commentdtos\\commentfindbyuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E548B347-B2E2-4727-9423-8EB3CE6AB9A5}|DTOs\\DTOs.csproj|solutionrelative:dtos\\commentdtos\\commentfindbyuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E548B347-B2E2-4727-9423-8EB3CE6AB9A5}|DTOs\\DTOs.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\dtos\\commentdtos\\commentgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E548B347-B2E2-4727-9423-8EB3CE6AB9A5}|DTOs\\DTOs.csproj|solutionrelative:dtos\\commentdtos\\commentgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E548B347-B2E2-4727-9423-8EB3CE6AB9A5}|DTOs\\DTOs.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\dtos\\commentdtos\\commentlistcontentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E548B347-B2E2-4727-9423-8EB3CE6AB9A5}|DTOs\\DTOs.csproj|solutionrelative:dtos\\commentdtos\\commentlistcontentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75E7CE5F-A2A1-43F7-BE6E-1D16749DCC72}|Repositories\\Repositories.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\repositories\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75E7CE5F-A2A1-43F7-BE6E-1D16749DCC72}|Repositories\\Repositories.csproj|solutionrelative:repositories\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\wikyproject\\controllers\\articlecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|solutionrelative:wikyproject\\controllers\\articlecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\wikyproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69F39801-F592-4F9D-8E7E-520DA7161897}|WikyProject\\WikyProject.csproj|solutionrelative:wikyproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75E7CE5F-A2A1-43F7-BE6E-1D16749DCC72}|Repositories\\Repositories.csproj|c:\\users\\diginamic\\source\\repos\\wikyproject\\repositories\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75E7CE5F-A2A1-43F7-BE6E-1D16749DCC72}|Repositories\\Repositories.csproj|solutionrelative:repositories\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,17 +46,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 279,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\WikyProject\\Program.cs",
               "RelativeDocumentMoniker": "WikyProject\\Program.cs",
               "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\WikyProject\\Program.cs",
               "RelativeToolTip": "WikyProject\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-17T09:34:10.754Z",
               "IsPinned": true,
@@ -64,80 +64,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthControllers.cs",
-              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\WikyProject\\Controllers\\AuthControllers.cs",
-              "RelativeDocumentMoniker": "WikyProject\\Controllers\\AuthControllers.cs",
-              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\WikyProject\\Controllers\\AuthControllers.cs",
-              "RelativeToolTip": "WikyProject\\Controllers\\AuthControllers.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T15:33:26.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ArticleService.cs",
-              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\Repositories\\ArticleService.cs",
-              "RelativeDocumentMoniker": "Repositories\\ArticleService.cs",
-              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\Repositories\\ArticleService.cs",
-              "RelativeToolTip": "Repositories\\ArticleService.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAmwK4AAABVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T14:00:15.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ArticleControllers.cs",
-              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\WikyProject\\Controllers\\ArticleControllers.cs",
-              "RelativeDocumentMoniker": "WikyProject\\Controllers\\ArticleControllers.cs",
-              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\WikyProject\\Controllers\\ArticleControllers.cs",
-              "RelativeToolTip": "WikyProject\\Controllers\\ArticleControllers.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAgwFUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T12:44:54.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "CommentControllers.cs",
               "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\WikyProject\\Controllers\\CommentControllers.cs",
               "RelativeDocumentMoniker": "WikyProject\\Controllers\\CommentControllers.cs",
               "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\WikyProject\\Controllers\\CommentControllers.cs",
               "RelativeToolTip": "WikyProject\\Controllers\\CommentControllers.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACUAAAAPAAAA",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAAAIMAAABjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T14:40:40.958Z",
+              "WhenOpened": "2024-04-18T08:16:43.931Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ArticleUpdateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\DTOs\\ArticleDTOs\\ArticleUpdateDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\ArticleDTOs\\ArticleUpdateDTO.cs",
-              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\DTOs\\ArticleDTOs\\ArticleUpdateDTO.cs",
-              "RelativeToolTip": "DTOs\\ArticleDTOs\\ArticleUpdateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAIAAAA",
+              "DocumentIndex": 2,
+              "Title": "CommentService.cs",
+              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\Repositories\\CommentService.cs",
+              "RelativeDocumentMoniker": "Repositories\\CommentService.cs",
+              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\Repositories\\CommentService.cs",
+              "RelativeToolTip": "Repositories\\CommentService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFkAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T14:27:43.184Z",
+              "WhenOpened": "2024-04-18T07:58:47.362Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\Models\\AppUser.cs",
+              "RelativeDocumentMoniker": "Models\\AppUser.cs",
+              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\Models\\AppUser.cs",
+              "RelativeToolTip": "Models\\AppUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T10:26:12.143Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ArticleReadDTO.cs",
-              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\DTOs\\ArticleDTOs\\ArticleReadDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\ArticleDTOs\\ArticleReadDTO.cs",
-              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\DTOs\\ArticleDTOs\\ArticleReadDTO.cs",
-              "RelativeToolTip": "DTOs\\ArticleDTOs\\ArticleReadDTO.cs",
+              "Title": "CommentFindByUserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\DTOs\\CommentDTOs\\CommentFindByUserDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\CommentDTOs\\CommentFindByUserDTO.cs",
+              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\DTOs\\CommentDTOs\\CommentFindByUserDTO.cs",
+              "RelativeToolTip": "DTOs\\CommentDTOs\\CommentFindByUserDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T09:18:28.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CommentGetDTO.cs",
+              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\DTOs\\CommentDTOs\\CommentGetDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\CommentDTOs\\CommentGetDTO.cs",
+              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\DTOs\\CommentDTOs\\CommentGetDTO.cs",
+              "RelativeToolTip": "DTOs\\CommentDTOs\\CommentGetDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T14:21:48.485Z",
+              "WhenOpened": "2024-04-18T09:18:27.543Z",
               "EditorCaption": ""
             },
             {
@@ -150,20 +139,33 @@
               "RelativeToolTip": "DTOs\\CommentDTOs\\CommentListContentDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T14:16:32.309Z",
+              "WhenOpened": "2024-04-18T08:54:11.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\Repositories\\UserService.cs",
-              "RelativeDocumentMoniker": "Repositories\\UserService.cs",
-              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\Repositories\\UserService.cs",
-              "RelativeToolTip": "Repositories\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFEAAABGAAAA",
+              "Title": "ArticleControllers.cs",
+              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\WikyProject\\Controllers\\ArticleControllers.cs",
+              "RelativeDocumentMoniker": "WikyProject\\Controllers\\ArticleControllers.cs",
+              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\WikyProject\\Controllers\\ArticleControllers.cs",
+              "RelativeToolTip": "WikyProject\\Controllers\\ArticleControllers.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwDoAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T14:00:24.669Z",
+              "WhenOpened": "2024-04-18T08:32:40.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ArticleService.cs",
+              "DocumentMoniker": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\Repositories\\ArticleService.cs",
+              "RelativeDocumentMoniker": "Repositories\\ArticleService.cs",
+              "ToolTip": "C:\\Users\\DIGINAMIC\\source\\repos\\WikyProject\\Repositories\\ArticleService.cs",
+              "RelativeToolTip": "Repositories\\ArticleService.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwFQAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T08:25:54.444Z",
               "EditorCaption": ""
             }
           ]

@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 
 namespace Repositories
 {
+    /// <summary>
+    /// Tools for user Managing
+    /// </summary>
     public class UserService
     {
         readonly AppDbContext context;

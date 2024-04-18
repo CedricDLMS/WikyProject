@@ -20,6 +20,7 @@ builder.Services.AddIdentityApiEndpoints<AppUser>()
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ThemeService>();
 builder.Services.AddScoped<ArticleService>();
+builder.Services.AddScoped<CommentService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
