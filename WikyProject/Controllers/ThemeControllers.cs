@@ -30,11 +30,16 @@ namespace WikyProject.Controllers
             this.userService = _userService;
             this.themeService = _themeService;
         }
+        /// <summary>
+        /// Theme Creation only for admins
+        /// </summary>
+        /// <param name="theme"></param>
+        /// <returns></returns>
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "superadmin")]
+        
         public async Task<IActionResult> CreateTheme(ThemeSimpleDTO theme)
         {
-            
             try
             {
                 var result = await themeService.CreateTheme(theme);

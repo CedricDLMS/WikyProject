@@ -44,7 +44,7 @@ namespace WikyProject.Controllers
         }
 
         /// <summary>
-        /// ERREUR ID COMMENTAIRE !!!!!! Read all articles with comments 
+        /// Read all articles with comments 
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -65,7 +65,7 @@ namespace WikyProject.Controllers
             return Ok(article);
         }
         /// <summary>
-        /// Update the Article with DTO and Id of article in input
+        /// Update the Article with DTO and Id of article in input, admin has a special update tool controller , so no access to this one 
         /// </summary>
         /// <param name="article"></param>
         /// <param name="id"></param>
@@ -93,7 +93,7 @@ namespace WikyProject.Controllers
         }
 
         /// <summary>
-        /// Create an article base on the DTO
+        /// Create an article based on the DTO
         /// </summary>
         /// <param name="article"></param>
         /// <returns>Hope everythings allright</returns>
@@ -122,6 +122,7 @@ namespace WikyProject.Controllers
             {
                 Id = Article.Id,
                 CreationDate = DateTime.Now,
+                EditDate = DateTime.Now,
                 Content = article.Content,
                 Title = article.Title,
                 Priority = article.Priority,
@@ -133,7 +134,7 @@ namespace WikyProject.Controllers
         }
 
         /// <summary>
-        /// Remove the specified article
+        /// Remove the specified article and associated comments , admin can use for all
         /// </summary>
         /// <param name="articleId">The article ID to delet</param>
         /// <returns>Might return exceptions if not found or no authorisation</returns>

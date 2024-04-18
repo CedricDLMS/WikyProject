@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Identity;
 using Models;
 using Swashbuckle.AspNetCore.Filters;
 using Repositories;
+using WikyProject;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,12 +17,15 @@ builder.Services.AddIdentityApiEndpoints<AppUser>()
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>();
 
+builder.Services.AddScoped<InitializerUser>();
+
 // -----------------SERVICE ADDING -----
 
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ThemeService>();
 builder.Services.AddScoped<ArticleService>();
 builder.Services.AddScoped<CommentService>();
+builder.Services.AddScoped<Helper>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -49,6 +54,16 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+
+// Initialize DB if no ADMIN 
+using(var scope = app.Services.CreateAsyncScope())
+{
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    await InitializerUser.UserAndRolesInit(context, userManager,roleManager); // check InitializerUserClass
+}
+
 
 app.MapIdentityApi<AppUser>();
 

@@ -77,7 +77,12 @@ namespace WikyProject.Controllers
             }
 
         }
-
+        /// <summary>
+        /// Edit comment by id
+        /// </summary>
+        /// <param name="commentEdit"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpPut]
         [Authorize]
         public async Task<IActionResult> EditComment(CommentEditByUserDTO commentEdit, int id)
@@ -101,7 +106,11 @@ namespace WikyProject.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+        /// <summary>
+        /// Delete comment by ID 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete]
         [Authorize]
         public async Task<IActionResult> DeleteComment(int id)
@@ -122,7 +131,10 @@ namespace WikyProject.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+        /// <summary>
+        /// Get all my comments (of connected user)
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> GetUserComments()

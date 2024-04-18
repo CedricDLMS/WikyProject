@@ -17,6 +17,7 @@ namespace DTOs.ArticleDTOs
         public int Id { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime EditDate { get; set; }
+        public string AuthorName {  get; set; }
         public string Title { get; set; }
         public string Theme { get; set; }
         public Priority Priority { get; set; }

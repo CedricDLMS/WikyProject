@@ -28,50 +28,60 @@ namespace Repositories
             this.signInManager = _signInManager;
         }
         /// <summary>
-        /// Used to get all articles
+        /// Used to get a list of articles with useful informations
         /// </summary>
         /// <returns>Return a list of articles without comments</returns>
         public async Task<List<ArticleListDTO>> ListArticlesAsync()
         {
-           
+
             List<Article> articlesList = await context.Articles
-                .Include(a=>a.Theme)
+                .Include(a => a.Theme)
+                .Include(u => u.User)
                 .ToListAsync();
 
             List<ArticleListDTO> dtos = articlesList.Select(article => new ArticleListDTO
             {
                 Id = article.Id,
+                AuthorName = article.User.Name,
                 CreationDate = article.CreationDate,
                 EditDate = article.EditDate,
                 Title = article.Title,
-                Theme = article.Theme.Name,  
+                Theme = article.Theme.Name,
                 Priority = article.Priority
-            }).ToList();
+            }).OrderBy(c=> c.Priority).ThenBy(i=>i.EditDate).ToList();
 
             return dtos;
         }
-
+        /// <summary>
+        /// List all articles with comments , could be used by admin ? 
+        /// </summary>
+        /// <returns>List of article</returns>
         public async Task<List<ArticleReadWithComDTO>> ListArticlesWithCommentsAsync()
         {
-            // Assuming _dbContext is your database context
+            // Doing all includes for right requests
             var articlesList = await context.Articles
-                .Include(a => a.Comments)  // Ensure to include Comments
-                .Include(a => a.User)    // Assuming there is an Author navigation property
-                .Include(a => a.Theme)     // Include Theme if it's a navigation property
+                .Include(a => a.Comments)
+                .ThenInclude(c => c.User)
+                .Include(a => a.User)
+                .Include(a => a.Theme)
                 .ToListAsync();
 
             List<ArticleReadWithComDTO> dtos = articlesList.Select(article => new ArticleReadWithComDTO
             {
                 CreationDate = article.CreationDate,
                 EditDate = article.EditDate,
-                AuthorName = article.User?.Name,  // Assuming Author has a Name property
+                AuthorName = article.User?.Name,
                 Title = article.Title,
                 Content = article.Content,
-                Theme = article.Theme.Name,  // Assuming Theme is an object with a Name property
+                Theme = article.Theme.Name,
                 Priority = article.Priority,
                 Comments = article.Comments?.Select(c => new CommentListContentDTO
                 {
-                    content = c.Content
+                    ID = c.Id,  // Showing all datas here, so an admin can get id to update a wrong comment
+                    authorName = c.User.Name,
+                    content = c.Content,
+                    Created = c.Created,
+                    LastUpdated = c.Updated,
                 }).ToList()
             }).ToList();
 
@@ -86,14 +96,14 @@ namespace Repositories
         {
             var article = await context.Articles
                 .Include(a => a.Comments)
-                .ThenInclude(c=> c.User)
+                .ThenInclude(c => c.User)
                 .Include(a => a.User)    // Only if there's an Author object and you need data from it
                 .Include(a => a.Theme)     // Include this if Theme is a navigation property
                 .FirstOrDefaultAsync(a => a.Id == articleId);
 
             if (article == null)
             {
-                return null; 
+                return null;
             }
             var dto = new ArticleReadWithComDTO
             {
@@ -150,6 +160,31 @@ namespace Repositories
 
             return true;
         }
+
+        public async Task<bool> UpdateArticleAdminAsync(int articleId, ArticleUpdateAdminDTO articleUpdateAdminDTO)
+        {
+            var article = await context.Articles.FindAsync(articleId);
+            if (article == null)
+            {
+                return false; // Article not found
+            }
+            if(articleUpdateAdminDTO.ThemeID == null || (int)articleUpdateAdminDTO.Priority > 2 || (int)articleUpdateAdminDTO.Priority < 0 ) // Check if inputs are good
+            {
+                return false;
+            }
+            // Update the article properties
+            article.Title = articleUpdateAdminDTO.Title;
+            article.Content = articleUpdateAdminDTO.Content;
+            article.ThemeID = articleUpdateAdminDTO.ThemeID;
+            article.EditDate = DateTime.Now;
+            article.Priority = articleUpdateAdminDTO.Priority;
+
+            // Save changes in the database
+            context.Articles.Update(article);
+            await context.SaveChangesAsync();
+
+            return true;
+        }
         /// <summary>
         /// Remove an article by id, checking if the user have rights for it
         /// </summary>
@@ -161,6 +196,9 @@ namespace Repositories
         {
             // Attempt to retrieve the article from the database
             var article = await context.Articles.FindAsync(articleId);
+            var comments = context.Comments.Where(c=>c.ArticleID == articleId).ToList();
+
+
             if (article == null)
             {
                 return false; // Article not found
@@ -169,17 +207,39 @@ namespace Repositories
             // Check if the current user is the creator of the article
             if (article.UserID != userId)
             {
+                if (await Helper.isAdmin(userId, context, userManager)) // check if is admin
+                {
+                    context.Articles.Remove(article);
+
+                    foreach (var comment in comments)
+                    {
+                        context.Remove(comment);
+                    }
+
+                    await context.SaveChangesAsync();
+
+                    return true; // return true and exit scope
+                }
                 throw new Exception("You do not have permission to delete this article.");
             }
 
             // Remove the article from the database
             context.Articles.Remove(article);
+
+            foreach (var comment in comments)
+            {
+                context.Remove(comment);
+            }
             await context.SaveChangesAsync();
 
             return true;
         }
 
-
+        /// <summary>
+        /// Return list of article from specified theme
+        /// </summary>
+        /// <param name="themeId"></param>
+        /// <returns></returns>
         public async Task<ThemeGetArticleDTO?> GetArticlesByThemeIdAsync(int themeId)
         {
             // Assuming _dbContext is your EF database context

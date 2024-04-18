@@ -20,11 +20,13 @@ namespace Repositories
         readonly AppDbContext context;
         readonly UserManager<AppUser> userManager;
         readonly SignInManager<AppUser> signInManager;
+        
         public UserService(AppDbContext _context, UserManager<AppUser> _userManager, SignInManager<AppUser> _signInManager)
         {
             this.context = _context;
             this.userManager = _userManager;
             this.signInManager = _signInManager;
+            
         }
         /// <summary>
         /// Creating an user in all tables , app user and user simple, using a DTO for prettier front
@@ -42,6 +44,7 @@ namespace Repositories
             {
                 UserName = userNew.Mail,
                 Email = userNew.Mail,
+              
             };
 
             if (!emailAddress.IsValid(userNew.Mail))
@@ -94,6 +97,53 @@ namespace Repositories
                 return false;
             }
             return true;
+        }
+
+        public async Task<UserGetAll> CreateAdminAsync(UserRegisterDTOs userNew)
+        {
+
+            EmailAddressAttribute emailAddress = new EmailAddressAttribute();
+            PasswordValidator<AppUser> passwordValidator = new PasswordValidator<AppUser>();
+
+            var AppUser = new AppUser
+            {
+                UserName = userNew.Mail,
+                Email = userNew.Mail,
+
+            };
+
+            if (!emailAddress.IsValid(userNew.Mail))
+            {
+                throw new Exception(emailAddress.ErrorMessage);
+            }
+            else if (userNew.Password1 != userNew.Password2)
+            {
+                throw new Exception($"Differents passwords");
+            }
+
+            var validate = await passwordValidator.ValidateAsync(userManager, AppUser, userNew.Password1);
+
+            if (!validate.Succeeded)
+            {
+                throw new Exception("Password Not valid format, need 1 upper case and one number at least");
+            }
+
+
+
+            var UserC = new User { AppUser = AppUser, Name = userNew.Name, AppUserId = AppUser.Id };
+
+            var UserY = new UserGetAll { Id = UserC.Id, Name = UserC.Name, AppUserId = AppUser.Id };
+
+            var result = await userManager.CreateAsync(AppUser, userNew.Password1);
+
+            var newAdmin = await userManager.AddToRoleAsync(AppUser, "superadmin");
+
+            var c = await context.AddAsync(UserC);
+            var y = await context.SaveChangesAsync();
+
+            return await Task.FromResult(UserY);
+
+
         }
 
     }

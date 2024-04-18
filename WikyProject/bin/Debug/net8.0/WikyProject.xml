@@ -4,6 +4,21 @@
         <name>WikyProject</name>
     </assembly>
     <members>
+        <member name="M:WikyProject.Controllers.AdminControllers.UpdateArticle(System.Int32,DTOs.ArticleDTOs.ArticleUpdateAdminDTO)">
+            <summary>
+            Edit all article fields possible
+            </summary>
+            <param name="articleId"> Wanted Article </param>
+            <param name="articleUpdateAdminDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WikyProject.Controllers.AdminControllers.Register(DTOs.UserDTOs.UserRegisterDTOs)">
+            <summary>
+            Used to manually create a new admin from super admin
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
         <member name="T:WikyProject.Controllers.ArticleControllers">
             <summary>
             Controllers for articles editing/Creating/Reading/Updating
@@ -17,7 +32,7 @@
         </member>
         <member name="M:WikyProject.Controllers.ArticleControllers.ReadAllArticleWithComment">
             <summary>
-            ERREUR ID COMMENTAIRE !!!!!! Read all articles with comments 
+            Read all articles with comments 
             </summary>
             <returns></returns>
         </member>
@@ -30,7 +45,7 @@
         </member>
         <member name="M:WikyProject.Controllers.ArticleControllers.UpdateArticle(DTOs.ArticleDTOs.ArticleUpdateDTO,System.Int32)">
             <summary>
-            Update the Article with DTO and Id of article in input
+            Update the Article with DTO and Id of article in input, admin has a special update tool controller , so no access to this one 
             </summary>
             <param name="article"></param>
             <param name="id"></param>
@@ -38,14 +53,14 @@
         </member>
         <member name="M:WikyProject.Controllers.ArticleControllers.CreateArticleAsync(DTOs.ArticleDTOs.ArticleCreateDTO)">
             <summary>
-            Create an article base on the DTO
+            Create an article based on the DTO
             </summary>
             <param name="article"></param>
             <returns>Hope everythings allright</returns>
         </member>
         <member name="M:WikyProject.Controllers.ArticleControllers.RemoveArticle(System.Int32)">
             <summary>
-            Remove the specified article
+            Remove the specified article and associated comments , admin can use for all
             </summary>
             <param name="articleId">The article ID to delet</param>
             <returns>Might return exceptions if not found or no authorisation</returns>
@@ -75,10 +90,38 @@
             <param name="articleId"></param>
             <returns></returns>
         </member>
+        <member name="M:WikyProject.Controllers.CommentControllers.EditComment(DTOs.CommentDTOs.CommentEditByUserDTO,System.Int32)">
+            <summary>
+            Edit comment by id
+            </summary>
+            <param name="commentEdit"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WikyProject.Controllers.CommentControllers.DeleteComment(System.Int32)">
+            <summary>
+            Delete comment by ID 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WikyProject.Controllers.CommentControllers.GetUserComments">
+            <summary>
+            Get all my comments (of connected user)
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:WikyProject.Controllers.ThemeControllers">
             <summary>
             Controllers for theme editing/updating/creating/deleting
             </summary>
+        </member>
+        <member name="M:WikyProject.Controllers.ThemeControllers.CreateTheme(DTOs.Theme.ThemeSimpleDTO)">
+            <summary>
+            Theme Creation only for admins
+            </summary>
+            <param name="theme"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

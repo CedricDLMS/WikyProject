@@ -19,7 +19,7 @@ namespace Repositories
         readonly AppDbContext context;
         readonly UserManager<AppUser> userManager;
         readonly SignInManager<AppUser> signInManager;
-        
+
         public CommentService(AppDbContext _context, UserManager<AppUser> _userManager, SignInManager<AppUser> _signInManager)
         {
             this.context = _context;
@@ -27,36 +27,48 @@ namespace Repositories
             this.signInManager = _signInManager;
         }
         /// <summary>
-        /// Method to update an arcle, will be used in comm controllers
+        /// Method to update an arcle, will be used in comm controllers, can be used by admins for any comments
         /// </summary>
         /// <param name="commentID">Id of the comment to be updated</param>
         /// <param name="userID">ID of the user trying to update</param>
         /// <returns>Returns True if editing went well, false or exception if not</returns>
-        public async Task<bool> UpdateCommentByIdAsync(int commentID,int userID, CommentEditByUserDTO commentEdit)
+        public async Task<bool> UpdateCommentByIdAsync(int commentID, int userID, CommentEditByUserDTO commentEdit)
         {
+            var userCurrent = context.Users.FirstOrDefault(u => u.Id == userID);
+            var appUserCurrent = userManager.Users.FirstOrDefault(u => u.Id == userCurrent.AppUserId);
+
             var comment = await context.Comments.FindAsync(commentID);
-            if(comment == null)
+            if (comment == null)
             {
                 return false;
             }
-            if(userID != comment.UserID)
+
+            if (userID != comment.UserID)
             {
-                throw new Exception("You're not the author of this comment");
+                if (await userManager.IsInRoleAsync(appUserCurrent, "superadmin"))
+                {
+                    comment.Content = commentEdit.Content;
+                    comment.Updated = DateTime.Now;
+                    context.Comments.Update(comment);
+                    return true;
+                }
+                else
+                {
+                    throw new Exception("You're not the author of this comment");
+                }
             }
-            
+
             // EDITING IF EVERYTHING GOOD
             comment.Content = commentEdit.Content;
             comment.Updated = DateTime.Now;
-            
             context.Comments.Update(comment);
             await context.SaveChangesAsync();
-
             return true;
 
         }
 
         /// <summary>
-        /// User to delet Comment by ID
+        /// User to delete Comment by ID , can be used by admins
         /// </summary>
         /// <param name="commentId">comment Id to remove</param>
         /// <param name="userId">Current user ID </param>
@@ -72,14 +84,22 @@ namespace Repositories
 
             if (userId != comment.UserID)
             {
-                throw new Exception("You're not the author of this comment"); 
+                // Checking if admin
+                if (await Helper.isAdmin(userId, context, userManager))
+                {
+                    context.Comments.Remove(comment);
+                    await context.SaveChangesAsync();
+
+                    return true; // exist and return true if admin
+                }
+                throw new Exception("You're not the author of this comment");
             }
 
             // Deleting the comment if the user is the author
             context.Comments.Remove(comment);
             await context.SaveChangesAsync();
 
-            return true; 
+            return true;
         }
 
         /// <summary>
